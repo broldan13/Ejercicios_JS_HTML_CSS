@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Ejercicios del DOM</h1>
+    </header>
+    <button class="btn-panel hamburger--minus" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+    <aside class="panel">
+        <nav class="menu">
+
+            <a href="#seccion1">Reloj Digital y Alarma Sonora</a>
+            <a href="#seccion2">Eventos del Teclado</a>
+            <a href="#seccion3">Contador Regresivo</a>
+            <a href="#seccion4">Sección 4</a>
+            <a href="#seccion5">Sección 5</a>
+
+        </nav>
+    </aside>
+
+    <main>
+        <section id="seccion1" class="section">
+            <h2>Reloj Digital y Alarma Sonora</h2>
+            
+            <div id="clock">
+                
+            </div>
+
+            <div>
+                
+                <button id="inicio-reloj" type="button">Inicio Reloj</button>
+                <button id="detener-reloj" type="button">Detener Reloj</button>
+                <button id="inicio-alarma" type="button">Inicio Alarma</button>
+                <button id="detener-alarma" type="button">Detener Alarma</button>
+
+            </div>
+        </section>
+        
+        <section id="seccion2" class="section">
+            <h2>Eventos del Teclado</h2>
+            <article class="square">
+                <div class="circle"></div>
+            </article>
+        </section>
+
+        <section id="seccion3" class="section">
+            <h2>Contador Regresivo</h2>
+                <div class="cronometro"></div>
+                <div class="cronometro2"></div>
+        </section>
+
+
+
+        <section id="seccion4" class="section">
+            <h2>Sección 4</h2>
+        </section>
+        <section id="seccion5" class="section">
+            <h2>Sección 5</h2>
+        </section>
+    </main>
+
+    <script src="js/index.js" type="module"></script>
+</body>
+</html>
