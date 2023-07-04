@@ -2,7 +2,7 @@
 :root{
     --main-font:sans-serif;
     --font-size:16px;
-    --main-color:yellow;
+    --main-color:#BDC3C7;
     --second-color:black;
     --main-modal-color:rgba(247,222,30,0.85);
     --second-modal-color:rgba(34,34,34,0.85);
@@ -35,6 +35,7 @@ img{
 .header{
     background-color: var(--main-color);
     color: var(--second-color);
+    z-index:997;
     position: sticky;
     top: 0;
     padding: 1rem;
@@ -53,6 +54,7 @@ img{
 }
 
 .panel{
+    overflow-y: auto;
     position: fixed;
     z-index: 998;
     top: 0;
@@ -86,6 +88,8 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0;
+    outline: 0;
 }
 
 .menu{
@@ -124,10 +128,311 @@ img{
     min-height: 50vh;
 }
 .circle{
-    background-color: yellow;
-    width: 4rem;
-    height: 4rem;
+    background-color:var(--main-color);
+    width: 8rem;
+    height: 8rem;
     margin: auto;
     border-radius: 50%;
 }
 
+.btn-back-top {
+    position: fixed;
+    z-index: 999;
+    right: calc(4.25rem + 1vw);
+    bottom: 1vh;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-back-top:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.btn-mode{
+    position: fixed;
+    left: calc(3vw);
+    border: 0;
+    outline: 0;
+    cursor:pointer;
+    bottom: 1vh;
+    z-index: 999;
+    font-size: 2rem;
+    background-color: var(--main-color);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+}
+.btn-mode:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.dark-mode{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.online,
+.offline{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: grey;
+    color: white;
+}
+/*------------------FILTROS DE BUSQUEDA----------------*/
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card{
+    background-color: var(--second-color);
+    color: var(--main-color);
+    transition: all 0.3s ease-out;
+}
+
+.card figcaption{
+    padding: 0.5rem;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+
+.filter{
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
+
+/*------------------Estilos sorteo digital--------------*/
+#btn-sorteo{
+    background-color: var(--second-color);
+    color: var(--main-color);
+    width: 5rem;
+    padding: 0.3rem;
+}
+/*--------------------Estilos carrusel-----------------*/
+.slider{
+    position: relative;
+    width: 75%;
+    margin: 1rem auto;
+    text-align:center;
+}
+
+.slides-slider{
+    position:relative;
+    height:400px;
+}
+
+.slide-slides{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.slide-slides img{
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.slide-slides.active{
+    opacity: 1;
+    visibility: visible;
+}
+.slider a{
+    display: block;
+    height: 5rem;
+    width: 2rem;
+    border-radius: 30%;
+    border: none;
+    text-align: center;
+    padding: 0.3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: black;
+}
+
+.slider a:hover{
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    border-radius: 0;
+    text-shadow: 2px 2px 3px black;;
+}
+
+.btns-sliders{
+    position: absolute;
+    top: 50%;
+    border: none;
+    margin: 0;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+   
+}
+
+/*-----------ScrollBy grid-------------*/
+@media screen and (min-width: 1024px){
+    body{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 5rem auto;
+        grid-template-areas: 
+            "header header"
+            "main  panel";
+    }
+
+    main{
+        grid-area: main;
+    }
+
+    .header{
+        grid-area: header;
+    }
+
+    .panel{
+        grid-area: panel;
+        position: sticky;
+        top: 5rem;
+        opacity: 1;
+        transform: translate(0,0);
+        background-color: var(--second-color);
+        align-self: start;
+        justify-content: flex-start;
+    }
+
+    .btn-panel{
+        display: none;
+    }
+
+    .menu{
+        justify-content: start;
+    }
+
+    .menu a{
+        font-size: 1rem;
+        text-align: right;
+        padding: 1rem;
+    }
+
+    .menu a:hover,
+    .menu a.active{
+        color: var(--second-color);
+        background-color: var(--main-color);
+    }
+
+    .btn-back-top{
+        right: initial;
+        left: calc(5.85rem + 1vw);
+    }
+}
+/*---------------------------Validaciones de formulario--------------------*/
+.contact-form {
+    --form-ok-color: #4caf50;
+    --form-error-color: #f44336;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.contact-form > * {
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form legend,
+.contact-form-response {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.contact-form input[type="submit"] {
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer; /* Cuando el cursor se posiciona encima aparece la mano indicadora */
+}
+
+.contact-form *::placeholder {
+    color: #000;
+}
+
+.contact-form [required]:valid {
+    border: thin solid var(--form-ok-color);
+}
+
+.contact-form [required]:invalid {
+    border: thin solid var(--form-error-color);
+}
+
+.contact-form-error {
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: #fff;
+    transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+    display: none;
+}
+
+@keyframes show-message {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/*--------------------------------------CONVERTIDOR TEXTO A VOZ---------------------*/

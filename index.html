@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-dark>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-dark>
     <header class="header">
         <h1>Ejercicios del DOM</h1>
     </header>
@@ -20,17 +20,28 @@
     <aside class="panel">
         <nav class="menu">
 
-            <a href="#seccion1">Reloj Digital y Alarma Sonora</a>
-            <a href="#seccion2">Eventos del Teclado</a>
-            <a href="#seccion3">Contador Regresivo</a>
-            <a href="#seccion4">Sección 4</a>
-            <a href="#seccion5">Sección 5</a>
+            <a href="#seccion1" data-scroll-spy>Reloj Digital y Alarma Sonora</a>
+            <a href="#seccion2" data-scroll-spy>Eventos del Teclado</a>
+            <a href="#seccion3" data-scroll-spy>Contador Regresivo</a>
+            <a href="#seccion4" data-scroll-spy>Responsive Tester</a>
+            <a href="#seccion5" data-scroll-spy>Responsive</a>
+            <a href="#seccion6" data-scroll-spy>Detección de dispositivos</a>
+            <a href="#seccion7" data-scroll-spy>Detección de red</a>
+            <a href="#seccion8" data-scroll-spy>Detección web cam</a>
+            <a href="#seccion9" data-scroll-spy>Geolocalización</a>
+            <a href="#seccion10" data-scroll-spy>Filtro de datos</a>
+            <a href="#seccion11" data-scroll-spy>Sorteo Digital</a>
+            <a href="#seccion12" data-scroll-spy>Carrusel</a>
+            <a href="#seccion13" data-scroll-spy>Video Autoplay</a>
+            <a href="#seccion14" data-scroll-spy>Validación de Formulario</a>
+            <a href="#seccion15" data-scroll-spy>Convertido texto a voz</a>
+            
 
         </nav>
     </aside>
 
     <main>
-        <section id="seccion1" class="section">
+        <section id="seccion1" class="section" data-scroll-spy>
             <h2>Reloj Digital y Alarma Sonora</h2>
             
             <div id="clock">
@@ -47,28 +58,208 @@
             </div>
         </section>
         
-        <section id="seccion2" class="section">
+        <section id="seccion2" class="section" data-scroll-spy>
             <h2>Eventos del Teclado</h2>
             <article class="square">
                 <div class="circle"></div>
             </article>
         </section>
 
-        <section id="seccion3" class="section">
+        <section id="seccion3" class="section" data-scroll-spy>
             <h2>Contador Regresivo</h2>
                 <div class="cronometro"></div>
                 <div class="cronometro2"></div>
         </section>
+        <section id="seccion4" class="section" data-scroll-spy>
+            <h2> Tester Responsive</h2>
 
-
-
-        <section id="seccion4" class="section">
-            <h2>Sección 4</h2>
+            <form id="responsive-tester">
+                <input name="direccion" type="url" placeholder="URL">
+                <br>
+                <input name="ancho" type="text" placeholder="Ancho">
+                <br>
+                <input name="alto" type="text" placeholder="Alto">
+                <br>
+                <input name="probar" type="submit" value="Probar">
+                <input name="cerrar" type="button" value="Cerrar">
+            </form>
+            
         </section>
-        <section id="seccion5" class="section">
-            <h2>Sección 5</h2>
+        <section id="seccion5" class="section" data-scroll-spy>
+            <h2> Responsive 5</h2>
+            <div id="youtube"></div>
+            <br><br>
+            <div id="maps"></div>
         </section>
+
+        <section id="seccion6" class="section" data-scroll-spy>
+            <h2>Detección de dispositivos (User Agent)</h2>
+            <div id="user-device"></div>
+        </section>
+
+        <section id="seccion7" class="section" data-scroll-spy>
+            <h2>Detección de conexión</h2>
+        </section>
+
+        <section id="seccion8" class="section" data-scroll-spy>
+            <h2>Detección web cam</h2>
+            <video id="web-cam"></video>
+        </section>
+
+        <section id="seccion9" class="section" data-scroll-spy>
+            <h2>Geolocalización</h2>
+            <div id="geolocation"></div>
+        </section>
+
+        <section id="seccion10" class="section" data-scroll-spy>
+            <h2>Filtro de búsqueda</h2>
+            <input type="search" placeholder="Buscar..." class="filter-card">
+            <article class="cards">
+
+                <figure class="card">
+                    <img src="https://cdn.pixabay.com/photo/2023/06/06/14/50/flower-8044860_640.jpg" alt="Nature">
+                    <figcaption>Nature</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="https://cdn.pixabay.com/photo/2014/12/24/05/02/drop-of-water-578897_640.jpg" alt="Water">
+                    <figcaption>Water</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="https://cdn.pixabay.com/photo/2023/06/14/11/47/carnival-8062929_640.jpg" alt="Culture">
+                    <figcaption>Culture</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="https://cdn.pixabay.com/photo/2023/06/18/16/50/european-roe-deer-8072439_640.jpg" alt="Animals">
+                    <figcaption>Animals</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="https://cdn.pixabay.com/photo/2023/05/01/06/41/dog-7962236_640.png" alt="Caricature">
+                    <figcaption>Caricature</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_640.jpg" alt="Art">
+                    <figcaption>Art</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2425121_640.jpg" alt="People">
+                    <figcaption>People</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img src="https://cdn.pixabay.com/photo/2015/06/22/08/39/child-817371_1280.jpg" alt="Kids">
+                    <figcaption>Kids</figcaption>
+                </figure>
+
+            </article>
+        </section>
+
+        <section id="seccion11" class="section" data-scroll-spy>
+            <h2>Sorteo Digital</h2>
+                <ul class="players">
+                    <li class="player">JavaScript</li>
+                    <li class="player">Ruby</li>
+                    <li class="player">C++</li>
+                    <li class="player">JAVA</li>
+                    <li class="player">Python</li>
+                    <li class="player">PHP</li>
+                </ul>
+                <button id="btn-sorteo">Sortear</button>
+            </div>
+        </section>
+
+        <section id="seccion12" class="section" data-scroll-spy>
+            <h2>Carrusel</h2>
+
+            <div class="slider">
+                <div class="slides-slider">
+                    <div class="slide-slides active">
+                        <img src="https://cdn.pixabay.com/photo/2023/05/23/14/38/mountain-8012898_640.jpg" alt="Natural">
+                    </div>
+                    <div class="slide-slides">
+                        <h4>Lorem</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Maiores porro officia placeat sed, itaque magnam ab corrupti 
+                            quas! Dicta inventore necessitatibus alias cupiditate dignissimos, 
+                            nihil esse magnam fuga expedita facilis.
+                        </p>
+                    </div>
+                    <div class="slide-slides">
+                        <img src="https://cdn.pixabay.com/photo/2023/06/18/04/57/silver-throated-tanager-8071234_640.jpg" alt="Animals">
+                    </div>
+                    <div class="slide-slides">
+                        <h4>Animals</h4>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Amet suscipit sed, accusamus omnis laudantium necessitatibus 
+                            corporis dolorem est molestiae rem in minus id, ab explicabo 
+                            placeat, quia asperiores blanditiis. At?
+                        </p>
+                    </div>
+
+                    <div class="slide-slides">
+                        <img src="https://cdn.pixabay.com/photo/2023/06/16/15/18/streetphotography-8068217_640.jpg" alt="City">
+                    </div>
+
+                </div>
+                <div class="btns-sliders">
+                    <a class="back" href="#">&laquo;</a>
+                    <a class="next" href="#">&raquo;</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="seccion13" class="section" data-scroll-spy>
+            <h2>VIDEO AUTOPLAY</h2>
+            
+                <video src="/assets/videos/cortometraje.mp4" muted controls loop data-video-autoplay></video>
+          
+        </section>
+
+        <section id="seccion14" class="section" data-scroll-spy>
+            <h2>VALIDACIÓN DE FORMULARIO</h2>
+            <form class="contact-form" action="https://formsubmit.co/myemail@gmail.com" method="POST" target="_blank">
+                <legend>Enviar</legend>
+                <input type="text" name="name" placeholder="Nombre" title="Solo se aceptan caracteres y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                <input type="email" name="email" placeholder="Correo" title="Ingresa un correo valido" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                <input type="text" name="subject" placeholder="Asunto" title="Ingresa el asunto" required>
+                <textarea name="comments" cols="30" rows="5" placeholder="Comentarios" title="El comentario no debe exceder 250 caracteres" data-pattern="^.{1,255}$" required></textarea>
+                <input type="submit" value="Enviar" class="btn-sent">
+
+                <div class="form-contac-loader none">
+                    <img src="/assets/loading.svg" alt="Loading">
+                </div>
+                
+                <div class="reply-form none">
+                    <p>
+                        Tus datos se enviarón correctamente.
+                    </p>
+                </div>
+                
+            </form>
+        </section>
+
+        <section id="seccion15" class="section" data-scroll-spy>
+            <h2>CONVERTIDOR TEXTO A VOZ</h2>
+            <select id="converter-text">
+                <option value="">---Elige una voz---</option>
+            </select>
+            <br><br>
+            <textarea id="converter-textArea" cols="30" rows="5" placeholder="Texto a convertir"></textarea>
+            <br>
+            <button id="converter-btn">Convertir</button>
+        </section>
+
     </main>
+    <button class="btn-back-top hidden">▲</button>
+    <button class="btn-mode">🌙</button>
 
     <script src="js/index.js" type="module"></script>
 </body>
